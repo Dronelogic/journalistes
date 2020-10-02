@@ -21,6 +21,11 @@ majuscule = $journalists.grep(/@[A-Z]/).count
 alphabet = $journalists.sort(&:casecmp)
 puts "Trie la liste de handle par ordre alphabétique"
 	puts alphabet
+
+ #Tri la liste de handle par taille des handle (les plus petits en premiers, les plus grands après)
+def sort_by_length(lst)
+  puts lst.sort_by(&:length)
+end
   
  #méthode pour 5 caracteres
  def five_letter(array)
@@ -34,3 +39,15 @@ puts "Trie la liste de handle par ordre alphabétique"
 end
 
 puts "Il y a  #{five_letter(array)} handles avec 5 caractères."
+
+ # Tri la liste de handle par ordre alphabétique.
+def sort_by_alphabet(lst)
+  puts lst.sort(&:casecmp)
+end
+
+
+
+# Quelle est la position dans l'array de la personne @epenser ?
+def wtp_of_epenser(lst)
+  puts "La position dans l'array de la personne @epenser est #{lst.find_index("@epenser")}"
+end
